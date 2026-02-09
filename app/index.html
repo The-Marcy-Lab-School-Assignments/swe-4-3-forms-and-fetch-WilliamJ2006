@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>app</title>
+</head>
+
+<body>
+  <h1>Pokemon!</h1>
+  <p id="error"></p>
+  <p id="success"></p>
+  <h2>Capture Pokemon</h2>
+
+  <form action="https://formspree.io/f/xkovgjqp" method="POST">
+    <div class="form-field">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required>
+    </div>
+
+    <div class="form-field">
+      <label for="types">Types</label>
+      <input type="text" name="types" id="types" required>
+    </div>
+
+    <div class="check-option">
+      <label for="is-favorite">Favorite</label>
+      <input type="checkbox" id="is-favorite" name="isFavorite" />
+    </div>
+
+    <button class="submit-button" type="submit">Capture</button>
+  </form>
+
+  <h2>Discovered Pokemon</h2>
+  <button id="discover-button">Find New Pokemon</button>
+  <ul id="discovered-list">
+    
+  </ul>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

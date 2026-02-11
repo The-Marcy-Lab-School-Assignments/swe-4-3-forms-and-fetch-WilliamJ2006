@@ -24,10 +24,11 @@ button.addEventListener(('click'), () => {
 })
 
 form.addEventListener(('submit'), async (event) => {
+  console.log(event);
   event.preventDefault();
   const formData = new FormData(form);
   const formValues = {
-    name: formData.get('name'),
+    name: formData.get('name'), //form.elements.name.value
     types: formData.get('types'),
     isFavorite: Boolean(formData.get('isFavorite'))
   }
